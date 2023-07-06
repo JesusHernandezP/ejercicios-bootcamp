@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr) ;
+    grid-template-areas: 
+    "aside header"
+    "aside main"
+    "aside footer";
+    padding: 300px;
+    padding-top: 0;
+    font-family: 'Roboto', sans-serif;;
+             
+}
+
+
+header {
+    display: grid;
+    grid-area: header;
+    border-bottom: 2px solid rgb(193, 193, 28);
+    margin-top: 70px;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+}
+
+aside.educacion-aside {
+    display: grid;
+    grid-area: aside; 
+    margin-right: 2em ;
+    background-color: rgb(238, 230, 230);
+    
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+}
+
+
+.cv-image {
+    /* display: grid;
+    grid-area: span; */
+    margin-top: 0;
+    /* margin-left: 15px; */
+    border: 30px solid white;
+    border-top: none;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    max-width: 250px ;
+    height: 250px;
+    
+
+}
+    
+.contactos {
+    padding-left: 2em;    
+    text-decoration: none;
+}
+
+.educacion {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.educacion-ul {
+    list-style: none;
+    padding: 0;
+   
+}
+
+.educacion-ul p {
+    margin: 0;
+}
+
+.referencia {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.referencia-ul{
+    list-style: none;
+    padding: 0;
+}
+.referencia-ul p{
+    list-style: none;
+    padding-left: 10px;
+    border-left: 2px solid rgb(193, 193, 28);
+    
+}
+
+.experiencia-laboral {
+    padding-right: 2em;
+}
+
+.experiencia-laboral li {
+    list-style: none;
+    text-align: left;
+}
+.experiencia-laboral p {
+    border-left: 2px solid rgb(193, 193, 28);
+    padding-left: 10px;
+    list-style: none;
+    
+}
+
+.ul-intereses li{
+    width: 6em;
+    float: left; 
+    font-weight:bold; 
+    
+}
+
