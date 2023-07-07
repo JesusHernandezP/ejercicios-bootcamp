@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "canvas-confetti": "1.6.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "esLintConfig":{
+    "extends": "./node_modules/standard/esLintrc.json"
+  }
+}
+  

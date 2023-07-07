@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    body {
+      margin: 0;
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 150px 1fr 150px;
+      grid-template-areas: 
+      'header header header header header'
+      'content content content content aside'
+      'footer footer footer footer footer';
+    }
+
+    .content-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      grid-area: header;
+      background-color: blueviolet;
+      color: white;
+      
+    }
+    main {
+      grid-area: content;
+    }
+    
+    main .products {
+      display: grid;
+      align-content: space-evenly;
+      justify-content: center;
+      min-height: 750px;
+      padding: 0;
+      /* height: 100%; */
+      /* width: 100%; */
+    }
+
+    main .product {
+      list-style: none;
+    }
+
+    aside {
+      background-color: darkkhaki;
+      grid-area: aside;
+    }
+
+    footer {
+      background-color: chartreuse;
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <header class="content-center">
+    01
+  </header>
+  <main class="">
+    <ul class="products">
+      <li class="product product01">Product 01</li>
+      <li class="product product02">Product 02</li>
+      <li class="product product03">Product 03</li>
+      <li class="product product04">Product 04</li>
+      <li class="product product05">Product 05</li>
+      <li class="product product06">Product 06</li>
+      <li class="product product07">Product 07</li>
+      <li class="product product08">Product 08</li>
+      <li class="product product09">Product 09</li>
+      <li class="product product10">Product 10</li>
+    </ul>
+  </main>
+  <aside class="content-center">
+    3
+  </aside>
+  <footer class="content-center">
+    4
+  </footer>
+</body>
+</html>

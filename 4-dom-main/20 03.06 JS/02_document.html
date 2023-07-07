@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto document</title>
+  <style>
+    nav a,
+    nav li {
+      color: blueviolet;
+      text-decoration: none; 
+      text-align: center;
+    }
+
+    .opaque {
+      opacity: .25;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <nav id="main-nav">
+      <ul>
+        <li class="nav-item"><a data-id="1" href="https://powercoders.es">PowerCoders</a></li>
+        <li class="nav-item active">Hola: <a data-id="2" data-hola="true" href="https://google.com">Google</a></li>
+        <li class="nav-item"><a data-id="3" href="#">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const header = document.querySelector('header #main-nav')
+    const nav = document.getElementById('main-nav')
+    // Convierte un HTMLCollection en un nuevo Array
+    const lis = Array.from(document.getElementsByClassName('nav-item'))
+    // lis.forEach(element => console.log(element))
+
+    const a = document.getElementsByTagName('a')
+
+    const varios = document.querySelectorAll('nav li, nav a')
+    // console.log(varios[3].parentElement.parentElement.children)
+    // varios.forEach(elem => console.log(elem))
+
+    // Node (nodo) -> cualquier elemento en el html, por ej: un texto
+    // Element (elemento) -> cualquier etiqueta
+
+    // console.log(varios[3].parentElement.parentElement.firstElementChild)
+    // console.log(varios[3].parentElement.parentElement.lastElementChild)
+    // console.log(varios[3].parentElement.parentElement.children[1])
+    // console.log(varios[3].parentElement.parentElement.childNodes)
+    // console.log(varios[3].parentElement)
+
+    const active = document.querySelector('.active')
+
+    // console.log(active.previousElementSibling)
+    // active.nextElementSibling.style.opacity = '.25'
+    // console.log(active.nextElementSibling)
+
+    // Forma automática
+    // active.classList.toggle('opaque')
+
+    // Forma Manual
+    // if (active.classList.contains('opaque')) {
+    //   active.classList.remove('opaque')
+    // } else {
+    //   active.classList.add('opaque')
+    // }
+
+    // console.log(active.innerHTML)
+    // console.log(active.innerText)
+
+    // getAttribute
+    // setAttribute
+    // hasAttribute
+    // removeAttribute
+    // const link = active.children[0]
+    // const attr = link.getAttribute('href')
+    // link.setAttribute('target', '_blank')
+
+    const links_externos = document.querySelectorAll('a[href^="http"]')
+    links_externos.forEach(link => link.setAttribute('target', '_blank'))
+    console.log(links_externos)
+
+    const link = document.querySelector('a[data-hola]')
+
+    // links_externos.forEach(link => link.setAttribute('data-hola', true))
+    // const id = active.children[0].getAttribute('data-id')
+    const id = link.dataset.id
+    console.log(id)
+
+  </script>
+</body>
+</html>

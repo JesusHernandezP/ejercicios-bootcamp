@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos en JS</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+    }
+    li {
+      list-style: none;
+    }
+    img {
+      width: 100%;
+    }
+    .opacity {
+      opacity: .25;
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+      const images = document.querySelectorAll('img')
+
+      const clicks = [0,0,0,0,0,0]
+      images.forEach(image => {
+        image.addEventListener('click', clickHandler)
+      })
+
+      function clickHandler(evento) {
+        // const id = evento.target.dataset.id
+        const { id } = evento.target.dataset
+
+        clicks[id] += 1
+        if (clicks[id] > 2) {
+          images[id].removeEventListener('click', clickHandler)
+        }
+        evento.target.classList.toggle('opacity')
+        console.log(clicks)
+      }
+    })
+  </script>
+</head>
+<body>
+  <ul>
+    <li><img src="./assets/images/01.jpg" data-id="0" alt=""></li>
+    <li><img src="./assets/images/02.jpg" data-id="1" alt=""></li>
+    <li><img src="./assets/images/03.jpg" data-id="2" alt=""></li>
+    <li><img src="./assets/images/01.jpg" data-id="3" alt=""></li>
+    <li><img src="./assets/images/02.jpg" data-id="4" alt=""></li>
+    <li><img src="./assets/images/03.jpg" data-id="5" alt=""></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envío de Formulario</title>
+  <style>
+    input.error {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <form action="#">
+    <label for="text">Escribe el nombre</label>
+    <input type="text" name="name" id="text">
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <script>
+    const form = document.querySelector('form')
+    const text = document.querySelector('#text')
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      if (text.value === '') {
+        text.classList.add('error')
+        console.error('Por favor, agrega un nombre')
+      } else {
+        console.info(`El nombre ${text.value} ha sido enviado`)
+        // form.submit()
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop | While</title>
+</head>
+<body>
+  <ul class="products"></ul>
+  <script>
+    const products_list = document.querySelector('ul.products')
+    const productos = ['Shampoo', 'Jabón', 'Carne', 'Huevos', 'Yoghurt', 'Pasta de dientes']
+    // let index = 0
+    let index = productos.length - 1
+    // var tries = 0
+    // const password = 'super clave'
+    // let user_password = prompt('Por favor, escriba su clave')
+
+    // while (user_password !== password && tries < 2) {
+    //   user_password = prompt('Por favor, escriba su clave')
+    //   tries++
+    // }
+    while (index >= 0) {
+      products_list.innerHTML += '<li>' + productos[index] + '</li>'
+      index--
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormData</title>
+</head>
+<body>
+  <form action="" name="user" enctype="multipart/form-data">
+    <p>
+      <label for="first_name">Nombre</label>
+      <input type="text" name="first_name" id="first_name">
+    </p>
+
+    <p>
+      <label for="last_name">Apellido</label>
+      <input type="text" name="last_name" id="last_name">
+    </p>
+
+    <p>
+      <label for="age">Edad</label>
+      <input type="text" name="age" id="age">
+    </p>
+    
+    <p>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email">
+    </p>
+
+    <p>
+      <label for="gender">Género</label>
+      <select name="gender" id="gender">
+        <option value="none">No sé</option>
+        <option value="F">Femenino</option>
+        <option value="M">Masculino</option>
+      </select>
+    </p>
+
+    <p>
+      Quieres recibir publicidad?
+      <input type="radio" name="ads" id="ads" value="true">
+      <label for="ads">Si</label>
+      <input type="radio" name="ads" id="ads" value="false">
+      <label for="ads">no</label>
+    </p>
+
+    <p>
+      Deportes:
+      <input type="checkbox" name="hobbie" id="hobbie[natacion]" value="natacion">
+      <label for="hobbie[natacion]">Natación</label>
+
+      <input type="checkbox" name="hobbie" id="hobbie[futbol]" value="futbol">
+      <label for="hobbie[futbol]">Fútbol</label>
+
+      <input type="checkbox" name="hobbie" id="hobbie[tennis]" value="tennis">
+      <label for="hobbie[tennis]">Tennis</label>
+    </p>
+
+    <p>
+      <label for="cv">Adjunta tu CV</label>
+      <input type="file" name="cv" id="cv">
+    </p>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    const form = document.forms.user
+    form.addEventListener('submit', formSubmitHandler)
+
+    function formSubmitHandler(event) {
+      event.preventDefault()
+      
+      const formData = new FormData(form)
+      formData.set('first_name', Date.now())
+      formData.append('timestamp', Date.now())
+      console.log(formData.getAll('hobbie'))
+
+      if (formData.has('email')) {
+        console.log('tiene email')
+      }
+
+      formData.delete('timestamp')
+      
+      console.log(formData)
+      console.log(JSON.stringify(formData))
+    }
+  </script>
+</body>
+</html>

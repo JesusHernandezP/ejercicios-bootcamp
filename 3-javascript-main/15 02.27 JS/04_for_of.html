@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop | For..of</title>
+</head>
+<body>
+  <ul class="products"></ul>
+
+  <script>
+    const products_list = document.querySelector('ul.products')
+    const products = ['Shampoo', 'Jabón', 'Carne', 'Huevos', 'Yoghurt', 'Pasta de dientes']
+    
+    for (const product of products) {
+      products_list.innerHTML += `<li>${product}</li>`
+    }
+  </script>
+</body>
+</html>

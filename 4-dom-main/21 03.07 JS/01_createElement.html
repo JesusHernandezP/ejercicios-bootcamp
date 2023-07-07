@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreateElement</title>
+</head>
+<body>
+  <div id="app"></div>
+  <!-- <header class="main-header">
+    <nav id="navigation">
+      <ul class="links">
+        <li class="link-item"><a class="link" href="#">Link 01</a></li>
+        <li class="link-item"><a class="link" href="#">Link 02</a></li>
+        <li class="link-item"><a class="link" href="#">Link 03</a></li>
+      </ul>
+    </nav>
+  </header> -->
+  <script>
+    const app = document.querySelector('#app')
+    
+    const header = document.createElement('header')
+    header.classList.add('main-header')
+
+    const nav = document.createElement('nav')
+    nav.id = 'navigation'
+
+    const ul = document.createElement('ul')
+    ul.classList.add('links')
+
+    for (let index = 0; index < 3; index++) {
+      const li = document.createElement('li')
+      li.classList.add('link-item')
+
+      const a = document.createElement('a')
+      a.classList.add('link')
+      a.href = '#'
+
+      const linkText = document.createTextNode(`Link 0${index + 1}`)
+
+      a.appendChild(linkText)
+      li.appendChild(a)
+      ul.appendChild(li)
+    }
+
+    nav.appendChild(ul)
+    header.appendChild(nav)
+    app.appendChild(header)
+
+    // const lis = document.querySelectorAll('#navigation li')
+    // console.log(lis[1])
+
+    const liSeleccionado = document.querySelector('#navigation li:nth-child(2)')
+
+    const li = document.createElement('li')
+    li.classList.add('elemento-vacio')
+
+    ul.insertBefore(li, liSeleccionado)
+  </script>
+</body>
+</html>

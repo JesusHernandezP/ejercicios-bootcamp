@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light dark;
+  --body-bg-color: #fff;
+  --body-color: #1b1b1b;
+  --light-blue: #bbdefb;
+  --dark-blue: #2196f3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #1b1b1b;
+    --body-color: #fff;
+    --light-blue: #c9e7ff;
+    --dark-blue: #2fa2fe;
+  }
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-color);
+  font-family: 'Merriweather', serif;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.main-header {
+  border-bottom: 1px solid var(--light-blue);
+  padding: 2.25em;
+}
+
+.main-title {
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.main-title__logo-img {
+  height: 1em;
+}
+
+.content {
+  padding: 5em;
+}
+
+.weather-form__label,
+.weather-form__input {
+  display: block;
+}
+
+.weather-form__inline-elems {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+}
+
+.weather-form__input {
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+  margin-top: .5em;
+  padding: 1em 1.25em;
+  width: calc(100% - 2.5em);
+}
+
+.weather-form__submit {
+  background-color: transparent;
+  border: none;
+}
+
+.weather-form__search-ico {
+  height: 1em;
+  fill: var(--dark-blue);
+}
+
+.app {
+  padding: 5em;
+}
+
+.weather {
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.weather__header {
+  text-align: center;
+}
+
+.weather__description {
+  height: 5em;
+}
+
+.weather__title {
+  font-size: 5em;
+  margin: 0;
+}

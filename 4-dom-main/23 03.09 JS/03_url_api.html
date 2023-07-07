@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL API</title>
+</head>
+<body>
+  <h1>Hola Mundo</h1>
+
+  <form action="./03_results.html">
+    <input type="text" name="a" placeholder="Valor de A">
+    <input type="text" name="b" placeholder="Valor de B">
+    <button type="submit">Sumar</button>
+  </form>
+  
+  <script>
+    // http://127.0.0.1:5500/03_url_api.html?q=Rafael+Nadal#
+
+    // https://youtu.be/zVRwUHbHgt8?t=377
+
+    const h1 = document.querySelector('h1')
+    const params = new URLSearchParams(window.location.search)
+    // const color = params.get('color')
+
+    // const a = parseInt(params.get('a'))
+    // const b = parseInt(params.get('b'))
+
+    // console.log(a + b)
+
+    // h1.style.color = color
+
+    console.log(params)
+  </script>
+</body>
+</html>
+

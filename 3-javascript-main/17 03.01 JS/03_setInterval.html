@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetInterval</title>
+</head>
+<body>
+  <h1>Cargando<span></span></h1>
+  <script>
+    const h1 = document.querySelector('h1 span')
+
+    let i = 0
+    const interval = setInterval(() => {
+      h1.innerText = Array(i % 10).fill('.').join('')
+      // if (i % 5 === 0) {
+      //   h1.innerText = 'Cargando'
+      // } else if (i % 5 === 1) {
+      //   h1.innerText = 'Cargando.'
+      // } else if (i % 5 === 2) {
+      //   h1.innerText = 'Cargando..'
+      // } else if (i % 5 === 3) {
+      //   h1.innerText = 'Cargando...'
+      // } else if (i % 5 === 4) {
+      //   h1.innerText = 'Cargando....'
+      // }
+      i++
+    }, 500)
+  </script>
+</body>
+</html>

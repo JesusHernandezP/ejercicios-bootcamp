@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Map</title>
+</head>
+<body>
+  
+  <script>
+    const names = [
+      'Manuel',
+      'José',
+      'Francisco',
+      'David',
+      'Juan',
+      'Javier',
+      'José Antonio',
+      'Daniel',
+      'José Luis',
+      'María Carmen',
+      'María',
+      'Carmen',
+      'Ana María',
+      'Josefa',
+      'María Pilar',
+      'Isabel',
+      'Laura',
+      'María Dolores',
+      'María Teresa'
+    ]
+
+    const family_name = [
+      'García',
+      'Rodríguez',
+      'González',
+      'Fernández',
+      'López',
+      'Martínez',
+      'Sánchez',
+      'Pérez',
+      'Gómez',
+      'Martín'
+    ]
+
+    function randomNumber(maxNum) {
+      return Math.floor(Math.random() * maxNum)
+    }
+
+    const users = names.map(name => ({ 
+      firstName: name,
+      lastName: family_name[randomNumber(family_name.length)],
+      age: randomNumber(60)
+    }))
+    console.log(users)
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de Búsqueda</title>
+</head>
+<body>
+  <div class="resultado"></div>
+
+  <script>
+    const resultadoDiv = document.querySelector('.resultado')
+    const params = new URLSearchParams(window.location.search)
+    const a = parseInt(params.get('a'))
+    const b = parseInt(params.get('b'))
+
+    resultadoDiv.innerText = a + b
+
+    console.log(params)
+  </script>
+</body>
+</html>

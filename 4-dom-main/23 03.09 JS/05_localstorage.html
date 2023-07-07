@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage</title>
+</head>
+<body>
+  <button id="info">Info del Usuario</button>
+  <button id="borrar">Borrar Info</button>
+  <div class="info"></div>
+  
+  <script>
+    const button = document.querySelector('button#info')
+    const borrar = document.querySelector('button#borrar')
+    const info = document.querySelector('.info')
+
+    // const user = {
+    //   first_name: 'Juan',
+    //   last_name: 'Pérez',
+    //   age: 30,
+    //   email: 'nada@nada.com'
+    // }
+
+    // localStorage.setItem('user', JSON.stringify(user))
+
+    button.addEventListener('click', () => {
+      const usr = JSON.parse(localStorage.getItem('user'))
+      if (!usr) return
+
+      info.innerHTML = `
+        <h2>${usr.first_name} ${usr.last_name}</h2>
+        <p>Email: ${usr.email}</p>
+        <p>Edad: ${usr.age}</p>
+      `
+    })
+
+    borrar.addEventListener('click', () => {
+      localStorage.removeItem('user')
+    })
+
+    // localStorage.setItem('holamundo', 'Hola Inmundo')
+  </script>
+</body>
+</html>

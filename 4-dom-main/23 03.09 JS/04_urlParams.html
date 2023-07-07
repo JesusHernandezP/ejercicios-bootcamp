@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Search Params</title>
+</head>
+<body>
+  <form action="./03_results.html" name="sumar">
+    <input type="text" name="a" placeholder="Valor de A">
+    <input type="text" name="b" placeholder="Valor de B">
+    <button type="submit">Sumar</button>
+  </form>
+
+  <script>
+    // const obj = {
+    //   marca: 'Fiat',
+    //   modelo: '600',
+    //   color: 'Amarillo',
+    //   doblarDerecha: function(grados) { console.log(`Estoy girando ${grados}º`) }
+    // }
+
+    const form = document.forms.sumar
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const params = new URLSearchParams()
+
+      params.set('a', form.a.value)
+      params.set('b', form.b.value)
+
+      console.log(params.toString())
+      window.location.href = `${form.action}?${params.toString()}`
+    })
+  </script>
+
+</body>
+</html>

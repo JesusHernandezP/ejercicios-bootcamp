@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="main-title">
+        <svg class="main-title__logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 370">
+          <defs>
+            <style>
+              .cls-1 { fill: var(--light-blue); }
+              .cls-2 {
+                fill: none;
+                stroke: var(--dark-blue);
+                stroke-linecap: round;
+                stroke-miterlimit: 10;
+                stroke-width: 20px;
+              }
+            </style>
+          </defs>
+          <path class="cls-1" d="M366.19,109.89c.85-4.97,1.3-10.07,1.3-15.28,0-49.49-40.12-89.61-89.61-89.61-34.89,0-65.12,19.94-79.92,49.04-12.23-11.3-28.57-18.22-46.53-18.22-37.88,0-68.58,30.7-68.58,68.58,0,2.3,.12,4.57,.34,6.81-.63-.02-1.25-.05-1.88-.05-40.33,0-73.03,32.7-73.03,73.03s32.7,73.03,73.03,73.03H358.49c40.8,0,73.87-33.07,73.87-73.87,0-38.19-28.99-69.61-66.16-73.47Z"/>
+          <path class="cls-2" d="M188.81,152.44c5.03-18.54,21.98-32.18,42.12-32.18,24.1,0,43.64,19.54,43.64,43.64s-19.54,43.64-43.64,43.64H110.75"/>
+          <path class="cls-2" d="M254.79,320.38c7.66,20.23,27.21,34.62,50.13,34.62,29.59,0,53.58-23.99,53.58-53.58s-23.99-53.58-53.58-53.58H89.72"/>
+          <path class="cls-2" d="M126.45,334.21c5.16,10.76,16.16,18.2,28.9,18.2,17.69,0,32.03-14.34,32.03-32.03s-14.34-32.03-32.03-32.03H68.04"/>
+        </svg>
+        <span class="main-title__logo-txt">PowerWeather</span>
+      </h1>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <form action="#" class="weather-form">
+        <label for="city" class="weather-form__label">Agrega una ciudad</label>
+        <div class="weather-form__inline-elems">
+          <input type="text" name="city" id="city" class="weather-form__input">
+          <button type="submit" class="weather-form__submit">
+            <svg class="weather-form__search-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 430">
+              <path d="M416,372.58l-107.66-107.66c17.42-25.62,27.66-56.56,27.66-89.92,0-88.36-71.64-160-160-160S16,86.64,16,175s71.64,160,160,160c33.36,0,64.3-10.23,89.92-27.66l107.66,107.66,42.42-42.42ZM76,175c0-55.16,44.84-100,100-100s100,44.84,100,100-44.84,100-100,100-100-44.84-100-100Z"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="app"></div>
+  </main>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

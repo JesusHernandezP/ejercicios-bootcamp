@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+.flex-container {
+  /* min-height: 100vh; */
+  display: flex;
+  padding: 0;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  /* Alinear en base al eje principal */
+  justify-content: center;
+
+  /* Alinear en base al eje secundario */
+  /* Para cuando los elementos forman 1 sola línea */
+  /* align-items: center; */
+
+  /* Alinear en base al eje secundario */
+  /* Para cuando los elementos tienen 2 ó más líneas */
+  align-content: space-evenly;
+}
+
+.flex-item {
+  background-color: tomato;
+  width: 200px;
+  aspect-ratio: 1;
+  list-style: none;
+  margin: 5px;
+  color: white;
+  font-size: 5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item01 {
+  flex-grow: 2;
+}
+
+@media (max-width: 800px) {
+  .item01 {
+    flex-grow: 2;
+    order: 6;
+  }
+  .item02 { order: 0; }
+  .item03 { order: 7; }
+  .item04 { order: 1; }
+  .item05 { order: 8; }
+  .item06 { order: 2; }
+  .item07 { order: 9; }
+  .item08 { order: 3; }
+  .item09 { order: 10; }
+  .item10 { order: 4; }
+  .item11 { order: 11; }
+  .item12 { order: 5; }
+}

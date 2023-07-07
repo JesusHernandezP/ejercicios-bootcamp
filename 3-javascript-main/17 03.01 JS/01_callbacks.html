@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callbacks</title>
+</head>
+<body>
+  <p class="saludar"></p>
+  <button class="color_change">cambiar color</button>
+  
+  <script>
+    const p = document.querySelector('.saludar')
+    const colorChange = document.querySelector('.color_change')
+
+    function handleClick() {
+      if (document.body.style.backgroundColor === 'blueviolet') {
+        document.body.style.backgroundColor = 'white'
+        document.body.style.color = 'black'
+      } else {
+        document.body.style.backgroundColor = 'blueviolet'
+        document.body.style.color = 'white'
+      }
+    }
+
+    colorChange.addEventListener('click', handleClick)
+
+    function saludar(text, callback) {
+      p.innerHTML = text
+      callback()
+    }
+
+    const despedir = () => { console.log('Adios mundo cruel') }
+    const bye = function() { console.log('Bye cruel world!') }
+
+    const sayHi = saludar
+
+    console.log(sayHi)
+
+    saludar('Hola Mundo!', function() {
+      console.log('Se ha ejecutado la función')
+    })
+
+    despedir()
+    sayHi('hello world!', function() {
+      console.log('Function executed successfully! ')
+    })
+    bye()
+  </script>
+</body>
+</html>

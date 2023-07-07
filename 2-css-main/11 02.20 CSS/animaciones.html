@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animaciones</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .square {
+      background-color: teal;
+      width: 7em;
+      aspect-ratio: 1;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        background-color: springgreen;
+      }
+      100% {
+        transform: rotate(180deg);
+        background-color: cornflowerblue;
+      }
+    }
+
+    @keyframes showUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .square:hover {
+      animation-name: showUp;
+      animation-duration: .75s;
+      animation-timing-function: ease-in-out;
+      /* animation-delay: .25s; */
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+</body>
+</html>

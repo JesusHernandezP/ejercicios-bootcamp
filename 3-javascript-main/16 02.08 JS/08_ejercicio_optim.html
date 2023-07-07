@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Map</title>
+</head>
+<body>
+  <ul class="underAges"></ul>
+  <ul class="adults"></ul>
+  
+  <script>
+    const underAgesDiv = document.querySelector('.underAges')
+    const adultsDiv = document.querySelector('.adults')
+
+    const names = [
+      'Manuel',
+      'José',
+      'Francisco',
+      'David',
+      'Juan',
+      'Javier',
+      'José Antonio',
+      'Daniel',
+      'José Luis',
+      'María Carmen',
+      'María',
+      'Carmen',
+      'Ana María',
+      'Josefa',
+      'María Pilar',
+      'Isabel',
+      'Laura',
+      'María Dolores',
+      'María Teresa'
+    ]
+
+    const family_name = [
+      'García',
+      'Rodríguez',
+      'González',
+      'Fernández',
+      'López',
+      'Martínez',
+      'Sánchez',
+      'Pérez',
+      'Gómez',
+      'Martín'
+    ]
+
+    function randomNumber(maxNum) {
+      return Math.floor(Math.random() * maxNum)
+    }
+
+    const users = names.map(name => ({ 
+      firstName: name,
+      lastName: family_name[randomNumber(family_name.length)],
+      age: randomNumber(60)
+    }))
+    // console.log(users)
+
+    /*
+      Filtrar del array users todos los usuarios mayores y menores de edad.
+      Cada uno de los grupos debe estar en una variable distinta.
+
+      Una vez filtrados los usuarios, deberá crearse por cada variable un array de objetos
+      donde cada usuario tenga nombre y edad.
+
+      Finalmente tomar cada uno de esos arrays filtrados e imprimirlos en el html
+      especificando: ${nombre}, ${edad} años.
+    */
+
+  //  const underAges = users.filter(user => user['age'] < 18)
+
+    const adultAge = 18
+    
+    // Formateo del elemento final
+    // const users_arr = users.map(user => ({name: user.firstName, age: user.age}))
+    const users_arr = users.map(user => {
+      return {
+        name: user.firstName,
+        age: user.age
+      }
+    })
+
+    // Filtro de mayores/menores de edad
+    const underAges = users_arr.filter(user => user.age < adultAge)
+    const adults = users_arr.filter(user => user.age >= adultAge)
+
+    const underAgesHTML = underAges.map(user => `<li>${user.name}, ${user.age} años.</li>`)
+    underAgesDiv.innerHTML = underAgesHTML.join(' ')
+
+    const adultsHTML = adults.map(user => `<li>${user.name}, ${user.age} años.</li>`)
+    adultsDiv.innerHTML = adultsHTML.join(' ')
+
+    // const adultsHTML = adults.reduce((acc, cur) => acc + `<li>${cur.name}, ${cur.age} años.</li>`, '')
+    // console.log(adultsHTML)
+    // adultsDiv.innerHTML = adultsHTML
+  </script>
+</body>
+</html>

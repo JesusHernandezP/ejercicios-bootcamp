@@ -1,0 +1,34 @@
+
+[{
+    "id": 1,
+    "name": "Berto",
+    "role": "Coordinador"
+  },
+  {
+    "id": 2,
+    "name": "Cristóbal",
+    "role": "Profesor"
+  },
+  {
+    "id": 3,
+    "name": "Zoe",
+    "role": "Profesora"
+  },
+  {
+    "id": 4,
+    "name": "Stefano",
+    "role": "Profesor"
+  },
+  {
+    "id": 5,
+    "name": "César",
+    "role": "Profesor"
+  },
+  {
+    "id": 6,
+    "name": "Samuel",
+    "role": "Profesor"
+  }
+  ]
+
+  

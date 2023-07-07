@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop | DoWhile</title>
+</head>
+<body>
+  <ul class="products"></ul>
+
+  <script>
+    const products_list = document.querySelector('ul.products')
+    const productos = ['Shampoo', 'Jabón', 'Carne', 'Huevos', 'Yoghurt', 'Pasta de dientes']
+    let index = 0
+    // do {
+    //   var clave = prompt('Por favor, dame la clave de acceso')
+
+    // } while (clave !== 'password')
+    do {
+      products_list.innerHTML += '<li>' + productos[index] + '</li>'
+      index++
+    } while (index < productos.length);
+  </script>
+</body>
+</html>

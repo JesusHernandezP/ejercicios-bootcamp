@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline Events</title>
+</head>
+<body>
+  <form action="" onsubmit="" name="subscribe">
+    <label for="">Agrega tu email</label>
+    <input type="text" name="email">
+    <button type="submit"></button>
+  </form>
+
+  <script>
+    const form = document.forms.subscribe
+    const name = form.email
+
+    name.addEventListener('blur', consola)
+
+    function consola(e) {
+      console.log(e)
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos de Array | Unshift</title>
+</head>
+<body>
+  <ul class="products"></ul>
+  <script>
+    const product_html = document.querySelector('.products')
+    const products = ['Shampoo', 'Jabón', 'Carne', 'Huevos', 'Yoghurt', 'Pasta de dientes']
+
+    products.unshift('Aguacate')
+
+    for (const product of products) {
+      product_html.innerHTML += `<li>${product}</li>`
+    }
+  </script>
+</body>
+</html>

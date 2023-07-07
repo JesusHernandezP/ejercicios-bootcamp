@@ -1,0 +1,33 @@
+:root {
+  --color-body: #fff;
+  --color-text: #111;
+  --color-primario: #DC143C;
+  --color-shadow: rgba(0,0,0,.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-body: #222;
+    --color-text: #fff;
+    --color-primario: #FF4500;
+    --color-shadow: rgba(255,255,255,.5);
+  }
+}
+
+body {
+  background-color: var(--color-body);
+  color: var(--color-text);
+}
+
+/* h1 {
+  color: var(--color-primario);
+  text-shadow: 0 0 5px var(--color-shadow);
+} */
+
+/* body h1:nth-child(2) {
+  color: greenyellow;
+} */
+
+body > div h1:nth-child(22) {
+  color: greenyellow;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    body {
+      margin: 0;
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 100px 1fr 100px;
+      grid-template-areas: 
+      'header header header header header'
+      'content content content content aside'
+      'footer footer footer footer footer';
+    }
+
+    .content-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      grid-area: header;
+      background-color: blueviolet;
+      color: white;
+      
+    }
+    main {
+      color: white;
+      grid-area: content;
+      background-color: blue;
+      min-height: 500px;
+    }
+
+    aside {
+      background-color: darkkhaki;
+      grid-area: aside;
+    }
+
+    footer {
+      background-color: chartreuse;
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <header class="content-center">
+    01
+  </header>
+  <main class="content-center">
+    02
+  </main>
+  <aside class="content-center">
+    3
+  </aside>
+  <footer class="content-center">
+    4
+  </footer>
+</body>
+</html>

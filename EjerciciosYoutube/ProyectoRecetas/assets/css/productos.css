@@ -1,0 +1,181 @@
+#productos-section{
+    background-position: center center;
+    background-size: 100% ;
+    height: 100vh;
+    padding: 50px;
+}
+
+#main-container .bg-productos {
+    background-image: url(/assets/img/bg-productos.jpg) !important;
+}
+
+#main-container .bg-jugos {
+    background-image: url(/assets/img/bg-productos01.jpg) !important;
+}
+
+#main-container .bg-mermeladas {
+    background-image: url(/assets/img/bg-productos02.jpg) !important;
+}
+
+#main-container .bg-ajvar {
+    background-image: url(/assets/img/bg-productos03.jpg) !important;
+}
+
+#main-container #menu-productos{
+    text-align: left;
+}
+
+#main-container #menu-productos ul{
+    margin: 0;
+    padding: 0;
+}
+
+#main-container #menu-productos ul li{
+    display: block;
+    text-align: left;
+    margin-left: 200px;
+}
+
+#main-container #menu-productos a{
+    color: white;
+    text-decoration: none;
+}
+
+#main-container #menu-productos h2{
+    font-size: 40px;
+
+}
+
+#main-container #menu-productos h2 span::after{
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 243px;
+    margin-top: 60px;
+
+    transition: all 0.3s;
+}
+
+#main-container #menu-productos h2:hover span::after{
+    width: 310px;
+}
+
+#main-container .productos-titulo h1{
+    color: white;
+    font-size: 10em;
+    text-align: center;
+}
+
+#main-container .productos-content section{
+    height: 100vh;
+    background-color: red;
+    margin: 0;
+}
+
+#main-container .productos-content #frutos01-content{
+    background-image: url(/assets/img/bg-jugos01.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #frutos02-content{
+    background-image: url(/assets/img/bg-jugos02.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #frutos03-content{
+    background-image: url(/assets/img/bg-jugos03.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #mermeladas01-content{
+    background-image: url(/assets/img/bg-mermeladas01.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #mermeladas02-content{
+    background-image: url(/assets/img/bg-mermeladas02.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #mermeladas03-content{
+    background-image: url(/assets/img/bg-mermeladas03.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #ajvar01-content{
+    background-image: url(/assets/img/bg-ajvar01.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #ajvar02-content{
+    background-image: url(/assets/img/bg-ajvar02.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content #ajvar03-content{
+    background-image: url(/assets/img/bg-ajvar03.jpg);
+    background-size: 100%;
+}
+
+#main-container .productos-content .description{
+    font-size: 1.5em;
+    color: white;
+    width: 700px;
+    text-align: center;
+    transition: all 1s;
+    padding-top: 100px;
+}
+
+
+#main-container .productos-content .description h2{
+    font-size: 10em;
+    margin: 0;
+}
+
+
+#main-container .productos-content .description h3{
+    font-size: 5em;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#main-container .productos-content .description p{
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+}
+
+.align-left{
+    opacity: 0;
+    margin-left: 10%;
+}
+
+.align-center{
+    opacity: 0;
+    margin: 0 auto;
+}
+
+.align-right{
+    opacity: 0;
+    margin-right: 10%;
+    margin-left: auto;
+}
+
+.align-right h2{
+    font-size: 7em in !important;
+}
+
+#main-container .productos-content section:hover .align-left{
+    opacity: 1;
+}
+
+#main-container .productos-content section:hover .align-center{
+    opacity: 1;
+}
+#main-container .productos-content section:hover .align-right{
+    opacity: 1;
+}
+
+

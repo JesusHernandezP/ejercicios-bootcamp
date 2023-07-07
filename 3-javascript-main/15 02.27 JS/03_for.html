@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop | For</title>
+</head>
+<body>
+  <ul class="products"></ul>
+
+  <script>
+    const products_list = document.querySelector('ul.products')
+    const productos = ['Shampoo', 'Jabón', 'Carne', 'Huevos', 'Yoghurt', 'Pasta de dientes']
+    
+    for (let index = 0; index < productos.length; index++) {
+      products_list.innerHTML += '<li>' + productos[index] + '</li>'
+    }
+
+    for (let index = productos.length - 1; index >= 0; index--) {
+      products_list.innerHTML += '<li>' + productos[index] + '</li>'
+    }
+  </script>
+</body>
+</html>

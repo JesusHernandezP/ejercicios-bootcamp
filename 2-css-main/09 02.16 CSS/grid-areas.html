@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Areas</title>
+  <style>
+    body {
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .grid-item {
+      background-color: blueviolet;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+    }
+
+    .item01 {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    .item08 {
+      grid-column: 1 / span 5;
+      aspect-ratio: inherit;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <!-- .grid-item.item$${$$}*50 -->
+  <div class="grid-item item01">01</div>
+  <div class="grid-item item02">02</div>
+  <div class="grid-item item03">03</div>
+  <div class="grid-item item04">04</div>
+  <div class="grid-item item05">05</div>
+  <div class="grid-item item06">06</div>
+  <div class="grid-item item07">07</div>
+  <div class="grid-item item08">08</div>
+  <div class="grid-item item09">09</div>
+  <div class="grid-item item10">10</div>
+  <div class="grid-item item11">11</div>
+  <div class="grid-item item12">12</div>
+  <div class="grid-item item13">13</div>
+  <div class="grid-item item14">14</div>
+  <div class="grid-item item15">15</div>
+  <div class="grid-item item16">16</div>
+  <div class="grid-item item17">17</div>
+  <div class="grid-item item18">18</div>
+  <div class="grid-item item19">19</div>
+  <div class="grid-item item20">20</div>
+  <div class="grid-item item21">21</div>
+  <div class="grid-item item22">22</div>
+  <div class="grid-item item23">23</div>
+  <div class="grid-item item24">24</div>
+  <div class="grid-item item25">25</div>
+  <div class="grid-item item26">26</div>
+  <div class="grid-item item27">27</div>
+  <div class="grid-item item28">28</div>
+  <div class="grid-item item29">29</div>
+  <div class="grid-item item30">30</div>
+  <div class="grid-item item31">31</div>
+  <div class="grid-item item32">32</div>
+  <div class="grid-item item33">33</div>
+  <div class="grid-item item34">34</div>
+  <div class="grid-item item35">35</div>
+  <div class="grid-item item36">36</div>
+  <div class="grid-item item37">37</div>
+  <div class="grid-item item38">38</div>
+  <div class="grid-item item39">39</div>
+  <div class="grid-item item40">40</div>
+  <div class="grid-item item41">41</div>
+  <div class="grid-item item42">42</div>
+  <div class="grid-item item43">43</div>
+  <div class="grid-item item44">44</div>
+  <div class="grid-item item45">45</div>
+  <div class="grid-item item46">46</div>
+  <div class="grid-item item47">47</div>
+  <div class="grid-item item48">48</div>
+  <div class="grid-item item49">49</div>
+  <div class="grid-item item50">50</div>
+</body>
+</html>

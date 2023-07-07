@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch</title>
+</head>
+<body>
+  <article class="user"></article>
+  <script>
+    // global | funcion | bloque
+    const hola = 'Hola Mundo'
+    // console.log(hola)
+    
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(users => {
+        const hola = 'Chao Pescao'
+        
+        if (hola == 'Chao Pescao') {
+          let mundo = 'Hola mundo cruel'
+        }
+        
+          const article = document.querySelector('.user')
+          const html = users.map(user => {
+            return `
+              <h2>${user.name}</h2>
+              <h4>${user.email}</h4>
+              <p className="phone">${user.phone}</p>
+              <div>
+                <a href="https://${user.website}">${user.website}</a>
+              </div>
+            `
+          })
+          article.innerHTML = html.join('')
+        })
+        .catch()
+        .finally()
+
+      console.log(html)
+  </script>
+</body>
+</html>

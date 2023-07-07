@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promesas</title>
+</head>
+<body>
+  <script>
+    // pendiente | rechazada | resuelta
+    /*
+    const promesa = new Promise((resolver, rechazar) => {
+      setTimeout(() => {
+        resolver({ id: 1, firstName: 'Juan', lastName: 'Pérez', age: 25 })
+      }, 2000)
+    })
+
+    promesa
+      .then(respuesta => console.log(respuesta))
+      .catch()
+      .finally()
+    */
+
+    function getUser(time) {
+      const json = JSON.stringify({
+        id: 1,
+        firstName: 'Juan',
+        lastName: 'Pérez',
+        age: 25
+      })
+      const promesa = new Promise((resolver, rechazar) => {
+        if (time < 0) {
+          rechazar('Aun no se ha creado la máquina del tiempo')
+        }
+
+        console.log(json)
+
+        setTimeout(() => {
+          resolver(json)
+        }, time)
+      })
+
+      return promesa
+    }
+
+    getUser(1000)
+      .then(data => JSON.parse(data))
+      .then(respuesta => console.log(respuesta))
+      .catch(err => console.error(err))
+      .finally(text => console.warn('Esto se ejecuta una vez que lo anterior ha sido respondido'))
+
+
+    // JSON
+    // JavaScript Object Notation
+  </script>
+</body>
+</html>

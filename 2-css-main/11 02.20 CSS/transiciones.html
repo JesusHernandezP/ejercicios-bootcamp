@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transiciones</title>
+  <style>
+    :root {
+      --naranjo: darkorange;
+    }
+
+    .square {
+      aspect-ratio: 1;
+      background-color: var(--naranjo);
+      width: 7.5em;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2em;
+      border: 1px solid transparent;
+
+      /* 
+      transition-property: background-color;
+      transition-duration: 1s;
+      transition-delay: .5s;
+      transition-timing-function: cubic-bezier(.86,0,.07,1);
+      */
+      transition: background-color 1s cubic-bezier(.86,0,.07,1),
+                  transform .25s .75s ease-in,
+                  border .5s .5s ease-in-out;
+    }
+
+    .square span {
+      display: none;
+      /* color: darkorange; */
+    }
+
+    .square:hover {
+      background-color: blueviolet;
+      border: 20px dashed tomato;
+      transform: rotate(45deg);
+    }
+
+    .square:hover span {
+      display: block;
+      /* color: white; */
+    }
+
+    .texto {
+      max-height: 4.5em;
+      max-width: 500px;
+      overflow: hidden;
+      transition: max-height .5s ease-in-out;
+    }
+
+    .ver-texto:hover .texto {
+      max-height: 5000px;
+    }
+  </style>
+</head>
+<body>
+  <div class="square">
+    <span>Hazme Click!</span>
+  </div>
+  <a class="ver-texto" href="#">
+    <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium commodi suscipit quasi a perspiciatis nesciunt, similique, nobis quo consequuntur vel, ipsa aperiam placeat vero dolore ut nemo blanditiis veritatis enim!Quas harum labore mollitia dignissimos temporibus iure, dicta vel voluptate veniam, aut atque fugiat placeat voluptates? Ipsum hic ab est, recusandae minima adipisci quis! Vel ullam dolor iure doloremque quidem.Fugiat quasi possimus praesentium architecto perspiciatis mollitia vel et quisquam voluptates accusantium, laboriosam velit nostrum deserunt nam! Nisi amet ullam, soluta mollitia, quo eum hic, corporis quisquam distinctio sint ad?Delectus, voluptatum temporibus. Labore veritatis sequi ut similique quidem eos atque! Odio totam, molestias consequuntur aperiam similique laborum nemo. Molestias, qui facere fuga labore iure deleniti cum deserunt amet ducimus.Architecto labore beatae alias suscipit dolores sunt iusto, dolor non saepe placeat doloremque similique nihil dignissimos facilis! Beatae veniam consequuntur, earum quas consectetur delectus modi molestias nemo sint. Corporis, voluptatibus.Magnam accusantium eaque, dolor in unde, porro deleniti corrupti explicabo at aspernatur tempora ullam labore voluptatem minus sint. Aspernatur ipsa asperiores tenetur aut odio incidunt? Incidunt, ab fugit. Ab, repellat.Voluptas sit omnis et atque harum temporibus asperiores officiis, sint, explicabo earum ut molestiae fugit autem aliquam debitis aperiam. Assumenda temporibus cupiditate similique, quasi molestiae debitis dicta minus enim velit?Et repellendus quidem nam iure molestiae voluptatibus doloremque velit exercitationem. Ducimus labore reprehenderit, accusamus aliquid delectus, temporibus placeat laboriosam nisi minima doloremque perferendis magnam aliquam in ab autem reiciendis id!Doloribus ipsa nobis quidem animi corrupti. Aut perferendis laboriosam molestias harum, odit dolores doloribus porro molestiae doloremque adipisci ad earum obcaecati cupiditate, ut soluta deserunt ab magnam ducimus sint ipsam?Rem error odit optio nostrum vero sint sunt, molestias minima accusamus maiores assumenda repellat quaerat nisi nihil nulla doloribus ducimus voluptatum repudiandae eius dignissimos natus enim porro in. Veniam, repudiandae.</p>
+  </a>
+</body>
+</html>

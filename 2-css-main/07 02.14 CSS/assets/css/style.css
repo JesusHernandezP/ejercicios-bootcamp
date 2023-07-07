@@ -1,0 +1,200 @@
+/*
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}*/
+
+:root {
+  font-size: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  font-size: 1.2rem; /* 30px */
+  /* color: white; */
+  /* width: 50%; */
+  /* background-image: url(../images/img.jpg); */
+  /* padding: 4rem; */
+  /* height: 100vh; */
+  width: 100vw;
+  /* background-color: yellowgreen;
+  background-color: #40E0D0;
+  background-color: rgb(0, 128, 128);
+
+  background-color: #40E0D0ff; */
+}
+
+h1 {
+  font-size: 3rem;
+  color: tomato;
+  color: rgba(255, 69, 0, .25);
+  color: #40E0D0DD;
+  font-weight: bolder;
+  /* text-decoration:underline; */
+  /* margin-top: 0; */
+  text-shadow: 2px 2px 5px rgba(195, 0, 0, 0.487);
+  text-align: center;
+}
+
+h2 {
+  font-weight: lighter;
+  font-weight: 300;
+  font-size: 4em;
+  font-style: normal;
+  font-style: italic;
+  font-style: oblique;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: justify;
+  width: 800px;
+  line-height: 2;
+  letter-spacing: 15px;
+  word-spacing: 1em;
+}
+
+img.perro {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.textos {
+  padding: 0;
+  margin: 0;
+}
+
+.textos li {
+  /* display: inline-block; */
+  /* float: left; */
+  width: 33.3%;
+  /* padding: 5%; */
+  box-sizing: border-box;
+  list-style: none;
+  /* height: 4.5em; */
+  /* overflow: visible; */
+  overflow: hidden;
+  margin-bottom: 5rem;
+  /* border-right: 3px solid #ccc; */
+  /* position: relative;
+  left: 50px; */
+  text-align: center;
+}
+.textos li span {
+  color: tomato;
+}
+
+.textos li img {
+  height: 1em;
+}
+
+
+/*
+  Elementos de Bloque
+  - Utilizan el máximo ancho posible (a menos que digamos lo contrario) para darle espacio a los contenidos que estén dentro (ej: elems inline)
+  - Se ditribuyen desde arriba hacia abajo
+  - Se alinean en el centro gracias a un márgen
+  - Podemos utilizar todas las propiedades del modelo de cajas
+*/
+
+/*
+  Elementos inline
+  - Se distribuyen una al lado de la otra, para formar palabras o textos
+  - font-size define su altura
+  - No se puede definir su ancho
+  - Su alineación es en base a herencia desde sus ancestros.
+*/
+
+/*
+  Elemementos inline-block
+  - se comportan como un elemento inline por fuera, pero por dentro como uno de bloque
+  - se puede definir alturas o anchos
+  - se alinean en base a la propiedad text-align
+*/
+
+.titulo {
+  clear: both;
+}
+
+nav {
+  clear: both;
+  position: sticky;
+  bottom: 0;
+  padding: 1em;
+  background-color: white;
+  width: 100%;
+
+  /**/
+  top: 20px;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+}
+
+.space {
+  height: 135px;
+  background-color: aquamarine;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+}
+
+.cuadrados {
+  padding: 50px;
+}
+
+/* Hijos directos */
+.cuadrados > div.cuadrado {
+  color: white;
+  /* display: inline-block; */
+  width: 300px;
+  aspect-ratio: 1;
+  float: left;
+}
+
+
+.cuadrado {
+  background-color: blueviolet;
+  /* background-image: url(../images/img.jpg); */
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background: blueviolet  center / 50% no-repeat url(../images/img.jpg); */
+  border: 5px solid rgba(255, 69, 0, .25);
+  /* border-radius: 100%; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, .75);
+  margin: 20px;
+  color: white;
+}
+
+.cuadrado01 {
+  /* position: static; */
+  /* position: relative; */
+  /* position: absolute; */
+  margin: 0;
+  position: relative;
+  left: 200px;
+  z-index: -1;
+}
+
+.cuadrado01,
+.cuadrado03,
+.cuadrado05 {
+  /* background-image: url(../images/perro.jpg); */
+  
+
+}

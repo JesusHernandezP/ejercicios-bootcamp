@@ -1,0 +1,62 @@
+#recetas-section{
+    background-position: center center;
+    background-size: 100% 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+#main-container .bg-recetas{
+    background-image: url(/assets/img/bg-recetas.jpg);
+}
+
+#main-container .bg-recetas-pie1{
+    background-image: url(/assets/img/bg-ajvar02.jpg);
+}
+#main-container .bg-recetas-pie2{
+    background-image: url(/assets/img/bg-productos01.jpg);
+}
+#main-container .bg-recetas-pie3{
+    background-image: url(/assets/img/bg-mermeladas01.jpg);
+}
+
+
+#main-container .recetas-titulo h1{
+    color: white;
+    font-size: 5em;
+    text-align: center;
+}
+#main-container .recetas-titulo h3{
+    color: aliceblue;
+    font-size: 2em;
+    text-align: center;
+    font-style: italic;
+}
+
+#main-container #recetas-content section{
+    background-color: white;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+}
+
+#main-container #recetas-content section .thumbnail{
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+}
+
+#main-container #recetas-content section .thumbnail .image img{
+    margin-bottom: -3px;
+    transition: all 0.5s;
+}
+
+
+#main-container #recetas-content section .thumbnail .image img:hover{
+    opacity: 0.7;
+}
+
+#main-container #recetas-content section .thumbnail .type{
+    color: gray;
+    font-style: italic;
+    padding: 5px 0 10p 0;
+}

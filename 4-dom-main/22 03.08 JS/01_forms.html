@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+
+  <style>
+    .advertising {
+      align-items: center;
+      color: white;
+      display: flex;
+      background-color: tomato;
+      justify-content: center;
+      margin-top: 2em;
+      min-height: 200px;
+    }
+
+    .display-none {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" name="subscribe">
+    <label for="email">Email</label>
+    <input 
+      type="text"
+      name="email" 
+      id="email" 
+      placeholder="Ingrese su correo">
+    <p class="count"></p>
+
+    <p>
+      <label for="advertising">Quieres recibir promociones?</label>
+      <select name="advertising" id="advertising">
+        <option value="true">Si</option>
+        <option value="false">No</option>
+      </select>
+    </p>
+
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <div class="advertising">
+    Esta es una publiciadad de esas bien molestas!
+  </div>
+
+  <script>
+    const validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+    const validNumeros = /[0-9]{1,5}/
+
+    // const form = document.forms[0]
+    const form = document.forms.subscribe
+    const email = form.email
+    const ads = form.advertising
+    const count = document.querySelector('.count')
+    const adsDiv = document.querySelector('.advertising')
+
+    form.addEventListener('submit', handleSubmit)
+    email.addEventListener('focus', emailFocusHandler)
+    email.addEventListener('blur', emailBlurHandler)
+    email.addEventListener('input', emailInputHandler)
+    ads.addEventListener('change', adsChangeHandler)
+
+    function adsChangeHandler(e) {
+      // let value
+      // if (ads.value === 'true') {
+      //   value = true
+      // } else {
+      //   value = false
+      // }
+
+      // const value = ads.value === 'true' ? true : false
+      const value = ads.value === 'true'
+
+      if (value === true) {
+        adsDiv.classList.remove('display-none')
+      } else {
+        adsDiv.classList.add('display-none')
+      }
+    }
+
+    function emailInputHandler(e) {
+      console.log(email.value)
+      const length = email.value.length
+      count.innerText = length + ' caracteres'
+      if (length > 30) {
+        count.style.color = 'red'
+      } else if (length > 25) {
+        count.style.color = 'tomato'
+      } else {
+        count.removeAttribute('style')
+      }
+    }
+
+    function emailBlurHandler(e) {
+      console.log('🙁!')
+      // if (email.value === '') {
+      //   alert('El email es obligatorio')
+      // }
+
+      // if (!validEmail.test(email.value)) {
+      //   alert('Email no válido')
+      // }
+    }
+
+    function emailFocusHandler(e) {
+      console.log('🎉!')
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault()
+      // const email = form.email.getAttribute('value')
+
+      if (email.value.length > 30) {
+        alert('Texto demasiado largo')
+      } 
+      // form.submit()
+
+      console.log(email.value)
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    #grid {
+      display: grid;
+      width: 80%;
+      height: 20em;
+      grid-rows: repeat(10, 1fr);
+      grid-columns: repeat(10, 1fr);
+    }
+
+    #grid > div {
+      border: 10px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    #grid .box01 {
+      grid-row: 1 / span 4;
+      grid-column: 1 / span 4;
+      border-color: red;
+    }
+    
+    #grid .box02 {
+      grid-row: 4 / span 4;
+      grid-column: 4 / span 4;
+      border-color: brown;
+      order: 10;
+    }
+
+    #grid .box03 {
+      grid-row: 7 / span 4;
+      grid-column: 7 / span 4;
+      border-color: yellow;
+    }
+
+    #grid .box04 {
+      grid-row: 4 / span 7;
+      grid-column: 3 / span 2;
+      border-color: greenyellow;
+    }
+
+    #grid .box05 {
+      grid-row: 2 / span 3;
+      grid-column: 4 / span 5;
+      border-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="grid">
+    <div class="box01">Box 01</div>
+    <div class="box02">Box 02</div>
+    <div class="box03">Box 03</div>
+    <div class="box04">Box 04</div>
+    <div class="box05">Box 05</div>
+  </div>
+</body>
+
+</html>

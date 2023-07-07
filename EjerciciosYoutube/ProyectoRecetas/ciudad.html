@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciudad</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/historia.css">
+
+
+
+</head>
+<body>
+    <div id="main-container">
+        <div id="points-container">
+            <a href="#" class="point p0"><div>+</div></a>
+            <a href="#" class="point p1"><div>+</div></a>
+            <a href="#" class="point p2"><div>+</div></a>
+            <a href="#" class="point p3"><div>+</div></a>
+            <a href="#" class="point p4"><div>+</div></a>
+
+        </div>
+        <div id="points-info">
+            <div>
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>
+                consectetur adipisicing elit. Veniam ratione soluta quas magni architecto quia molestiae animi non repellat sunt, vel nihil totam repellendus, alias provident nulla quam, reiciendis enim.
+                </p>
+
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+                <p href="#" class="btn btn-verde close-btn">cerrar</p>
+            </div>
+            <div>
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>
+                consectetur adipisicing elit. Veniam ratione soluta quas magni architecto quia molestiae animi non repellat sunt, vel nihil totam repellendus, alias provident nulla quam, reiciendis enim.
+                </p>
+
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+                <p href="#" class="btn btn-verde close-btn">cerrar</p>
+            </div>
+            <div>
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>
+                consectetur adipisicing elit. Veniam ratione soluta quas magni architecto quia molestiae animi non repellat sunt, vel nihil totam repellendus, alias provident nulla quam, reiciendis enim.
+                </p>
+
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+                <p href="#" class="btn btn-verde close-btn">cerrar</p>
+            </div>
+            <div>
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>
+                consectetur adipisicing elit. Veniam ratione soluta quas magni architecto quia molestiae animi non repellat sunt, vel nihil totam repellendus, alias provident nulla quam, reiciendis enim.
+                </p>
+
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+                <p href="#" class="btn btn-verde close-btn">cerrar</p>
+            </div>
+            <div>
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>
+                consectetur adipisicing elit. Veniam ratione soluta quas magni architecto quia molestiae animi non repellat sunt, vel nihil totam repellendus, alias provident nulla quam, reiciendis enim.
+                </p>
+
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+                <p href="#" class="btn btn-verde close-btn">cerrar</p>
+            </div>
+
+        </div>
+        <div id="historia-section" class="bg-ciudad">
+            <div id="logo">
+                <a href="#"><img src="" alt=""></a>
+            </div>
+            <div id="menu">
+                <h2>un tieempo</h2>
+                <h3>donde el secreto es mantenido</h3>
+                <ul>
+                    <li>
+                        <a href="historia.html">
+                            <div class="point-out ">
+                                <div class="point-in"></div>
+                            </div> 
+                            PUEBLO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cosecha.html">
+                            <div class="point-out ">
+                                <div class="point-in"></div>
+                            </div> 
+                            COSECHA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cocina.html">
+                            <div class="point-out">
+                                <div class="point-in"></div>
+                            </div> 
+                            COCINA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ciudad.html">
+                            <div class="point-out active-point">
+                                <div class="point-in"></div>
+                            </div> 
+                            CIUDAD
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <ul>
+            <li><a href="terminos.html">terminos</a></li>
+            <li><a href="terminos.html">privacidad</a></li>
+            <li><a href="terminos.html">copyright</a></li>
+        </ul>
+        <div id="derechos">
+            ©️ derechos reservados
+        </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $('.point').on('click', function(){
+                var i = $(this).index();
+
+                $('#points-info div').hide();
+                $('#points-info').fadeIn();
+                $('#points-info div').eq(i).show();
+            });
+
+            $(".close-btn").on("click", function(){
+                $("#points-info").fadeOut();
+            })
+        });
+    </script>
+</body>
+</html>

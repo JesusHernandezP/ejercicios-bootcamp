@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Fr</title>
+  <style>
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1.5em;
+      padding: 1.25rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 3px rgba(0,0,0,.5);
+    }
+
+    form input {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button img {
+      height: 1em;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: 200px repeat(3, minmax(100px, 500px ));
+      /* grid-template-rows: repeat(3, 200px) repeat(3, 400px) repeat(3, 100px); */
+
+      /* grid-auto-rows: auto; */
+      list-style: none;
+      padding: 0;
+      color: white;
+      gap: 5px;
+    }
+
+    .products .product {
+      background-color: blueviolet;
+      padding: 1em;
+    }
+
+  </style>
+</head>
+<body>
+  <form action="#">
+    <input type="text" name="q" placeholder="Buscar">
+    <button type="submit">
+      <img src="./assets/img/search.svg" alt="">
+    </button>
+  </form>
+
+  <ul class="products">
+    <li class="product product01">
+      <p>Producto 01</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem ut adipisci natus quod porro laboriosam, eos unde quasi id autem illum ullam dignissimos consequuntur. Cum odit aliquid quidem architecto!</p>
+    </li>
+    <li class="product product02">Producto 02</li>
+    <li class="product product03">Producto 03</li>
+    <li class="product product04">Producto 04</li>
+    <li class="product product05">Producto 05</li>
+    <li class="product product06">Producto 06</li>
+    <li class="product product07">Producto 07</li>
+    <li class="product product08">Producto 08</li>
+    <li class="product product09">Producto 09</li>
+    <li class="product product10">Producto 10</li>
+    <li class="product product11">Producto 11</li>
+    <li class="product product12">Producto 12</li>
+    <li class="product product13">Producto 13</li>
+    <li class="product product14">Producto 14</li>
+    <li class="product product15">Producto 15</li>
+    <li class="product product16">Producto 16</li>
+    <li class="product product17">Producto 17</li>
+    <li class="product product18">Producto 18</li>
+    <li class="product product19">Producto 19</li>
+    <li class="product product20">Producto 20</li>
+    <li class="product product21">Producto 21</li>
+    <li class="product product22">Producto 22</li>
+    <li class="product product23">Producto 23</li>
+    <li class="product product24">Producto 24</li>
+    <li class="product product25">Producto 25</li>
+    <li class="product product26">Producto 26</li>
+    <li class="product product27">Producto 27</li>
+    <li class="product product28">Producto 28</li>
+    <li class="product product29">Producto 29</li>
+    <li class="product product30">Producto 30</li>
+    <li class="product product31">Producto 31</li>
+    <li class="product product32">Producto 32</li>
+    <li class="product product33">Producto 33</li>
+    <li class="product product34">Producto 34</li>
+    <li class="product product35">Producto 35</li>
+    <li class="product product36">Producto 36</li>
+    <li class="product product37">
+      <p>Producto 37</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo libero provident veritatis dolore a eaque aliquam nesciunt ea perspiciatis omnis, adipisci similique quisquam cupiditate eos praesentium voluptate delectus incidunt.</p>
+    </li>
+    <li class="product product38">Producto 38</li>
+    <li class="product product39">Producto 39</li>
+    <li class="product product40">Producto 40</li>
+    <li class="product product41">Producto 41</li>
+    <li class="product product42">Producto 42</li>
+    <li class="product product43">Producto 43</li>
+    <li class="product product44">Producto 44</li>
+    <li class="product product45">Producto 45</li>
+    <li class="product product46">Producto 46</li>
+    <li class="product product47">Producto 47</li>
+    <li class="product product48">Producto 48</li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    body {
+      background-color: cornflowerblue;
+      margin: 0;
+    }
+
+    .cuadrados > div.cuadrado {
+      color: white;
+      /* display: inline-block; */
+      width: calc(100% - 2em);
+      aspect-ratio: 1;
+      float: left;
+    }
+
+    .cuadrado {
+      background-color: blueviolet;
+      /* background-image: url(../images/img.jpg); */
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* background: blueviolet  center / 50% no-repeat url(../images/img.jpg); */
+      border: 1em solid rgba(255, 69, 0, .25);
+      /* border-radius: 100%; */
+      color: white;
+      font-size: 3rem;
+      /* box-sizing: border-box; */
+    }
+
+    @media screen and (min-width: 800px) {
+      body {
+        background-color: deeppink;
+      }
+
+      .cuadrados > div.cuadrado {
+        border-width: .25em;
+        width: calc((100% / 6) - .5em);
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="cuadrados">
+    <div class="cuadrado cuadrado01">01</div>
+    <div class="cuadrado cuadrado02">02</div>
+    <div class="cuadrado cuadrado03">03</div>
+    <div class="cuadrado cuadrado04">04</div>
+    <div class="cuadrado cuadrado05">05</div>
+    <div class="cuadrado cuadrado06">06</div>
+  </article>
+</body>
+</html>

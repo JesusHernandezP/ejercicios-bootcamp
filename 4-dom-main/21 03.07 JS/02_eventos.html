@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos en JS</title>
+</head>
+<body>
+  <button>Hazme Click!</button>
+
+  <script>
+    const button = document.querySelector('button')
+
+    button.addEventListener('click', (evento) => {
+      console.log(evento.target)
+    })
+  </script>
+</body>
+</html>

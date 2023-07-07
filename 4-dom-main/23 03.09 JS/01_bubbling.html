@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubbling</title>
+</head>
+<body>
+  <div>
+    <ul>
+      <li></li>
+      <li>
+        <a class="click" href="#">
+          <span>Hazme Click!</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <script>
+    const a = document.querySelector('.click')
+    const li = document.querySelector('ul li:nth-child(2)')
+    a.addEventListener('click', (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+
+      console.log(e)
+    })
+
+    document.body.addEventListener('click', (e) => {
+      console.log('También recibí ese evento en el body')
+    })
+  </script>
+</body>
+</html>

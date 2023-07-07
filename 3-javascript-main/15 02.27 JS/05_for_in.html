@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop | For..of</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <ul class="products"></ul>
+
+  <script>
+    const products_list = document.querySelector('ul.products')
+    const products = ['Shampoo', 'Jabón', 'Carne', 'Huevos', 'Yoghurt', 'Pasta de dientes']
+
+    for (const index in products) {
+      console.log(typeof index)
+      products_list.innerHTML += `<li>${Number(index) + 1}. ${products[index]}</li>`
+    }
+
+    for (const index in products.reverse()) {
+      products_list.innerHTML += `<li>${Number(index) + products.length + 1}. ${products[index]}</li>`
+    }
+  </script>
+</body>
+</html>
